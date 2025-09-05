@@ -22,7 +22,7 @@ export default function Navbar()
   }
 return(
 <div className="bg-sky-950 flex items-center gap-200 h-20 p-4 shadow-xl ">
-  <div><a href="/" className="text-white">Home</a></div>
+  <div><Link href="/" className="text-white">Home</Link></div>
   
 {currentUserName?
 
