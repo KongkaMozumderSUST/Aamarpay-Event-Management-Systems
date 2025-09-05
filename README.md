@@ -18,5 +18,7 @@ Users can view upcoming events, create new events, and manage their own events.
 <img width="1901" height="963" alt="Image" src="https://github.com/user-attachments/assets/cce6cbc3-0f20-46d3-a292-89c2bec00dce" />
 ### 7. Update events
 <img width="1895" height="937" alt="Image" src="https://github.com/user-attachments/assets/36aa7fe3-7831-4b55-b8ce-0e8af602db3c" />
+### 8. View Event
 <img width="1898" height="952" alt="Image" src="https://github.com/user-attachments/assets/6c3b9da4-b04e-4e26-a2e3-f1eefa8b3709" />
+### 9. Create events
 <img width="1897" height="957" alt="Image" src="https://github.com/user-attachments/assets/ccabf615-e59e-45a0-8d96-cf6a16119d96" />
