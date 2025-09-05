@@ -11,7 +11,6 @@ Users can view upcoming events, create new events, and manage their own events.
 ### 2. npm install
 ### 3. npm run dev
 <img width="1903" height="972" alt="Image" src="https://github.com/user-attachments/assets/1053bd04-8c47-4313-98f8-0e5fdacd6a80" />
-<img width="743" height="295" alt="Image" src="https://github.com/user-attachments/assets/9a22adb6-04fd-47de-9967-2c691f06e6e6" />
 <img width="1905" height="960" alt="Image" src="https://github.com/user-attachments/assets/9b669e71-ea8b-45c0-8089-cf3469e11883" />
 <img width="1901" height="963" alt="Image" src="https://github.com/user-attachments/assets/cce6cbc3-0f20-46d3-a292-89c2bec00dce" />
 <img width="1895" height="937" alt="Image" src="https://github.com/user-attachments/assets/36aa7fe3-7831-4b55-b8ce-0e8af602db3c" />
