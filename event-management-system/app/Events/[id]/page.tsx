@@ -16,7 +16,7 @@ type EventItem = {
 };
 
 export default function EventDetails() {
-  const { id } = useParams(); // 🔑 dynamic id from URL
+  const { id } = useParams(); 
   const [event, setEvent] = useState<EventItem | null>(null);
   const [loading, setLoading] = useState(true);
 
@@ -26,7 +26,7 @@ export default function EventDetails() {
         const res = await fetch(`/api/events/${id}`);
         if (!res.ok) throw new Error("Failed to fetch event");
         const data = await res.json();
-        setEvent(data);
+        setEvent(data.event);
       } catch (err) {
         console.error(err);
       } finally {

@@ -3,7 +3,8 @@ export async function GET( _request:Request,{params}:{params:Promise<{id:string}
 {
 const {id} =await params;
 const event = demoEvents.find((event)=> parseInt(event.id) === parseInt(id));
-return Response.json(event);
+console.log(event)
+return Response.json({event});
 
 }
 export async function DELETE( _request:Request,{params}:{params:Promise<{id:string}>})

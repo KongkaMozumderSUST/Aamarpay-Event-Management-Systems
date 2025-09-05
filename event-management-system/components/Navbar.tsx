@@ -21,27 +21,33 @@ export default function Navbar()
     redirect('/')
   }
 return(
-<div className="bg-sky-950 flex items-center gap-100 h-20 p-4 shadow-xl">
+<div className="bg-sky-950 flex items-center gap-200 h-20 p-4 shadow-xl ">
   <div><a href="/" className="text-white">Home</a></div>
-  <div className="justify-end p-4 flex items-center gap-40">
+  
 {currentUserName?
-  (<><div><a href="/MyEvents" className="text-white"><button>My Event</button></a></div>
+
+  (<>
+  <div className="justify-end p-4 flex items-center gap-10 ">
+    <div><a href="/MyEvents" className="text-white"><button>My Event</button></a></div>
   <div><Link href="/CreateEvents" className="text-white"><button>Create Event</button></Link></div>
 
     <div><a href="/" className="text-white"><button>{currentUserName}</button></a></div>
     <form onSubmit={handleSubmitLogout}>
-    <button type="submit" className="text-white" >Logout</button>
+    <button type="submit" className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Logout</button>
     </form>
-    
+    </div>
   </>
   ) :<>
-  <div><a href="/login" className="text-white"><button>Login</button></a></div>
-  <div><a href="/signup" className="text-white"><button>SignUp</button></a></div>
+  <div className="justify-end p-4 flex items-center gap-20 ">
+  <div><a href="/login" className="text-white"><button>Login/</button></a>/<a href="/signup" className="text-white"><button>SignUp</button></a></div>
+
+  </div>
+ 
   </>}
 
   
 </div>
 
-</div>
+
     );
 }
