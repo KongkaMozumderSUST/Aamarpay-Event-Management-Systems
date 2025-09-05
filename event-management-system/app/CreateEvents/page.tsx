@@ -14,8 +14,7 @@ type EventItem = {
 };
 
 export default function CreateEventPage() {
-  const storedUser = localStorage.getItem("user");
-  const creatorName = storedUser ? JSON.parse(storedUser).name : "";
+  
    const [events, setEvents] = useState<EventItem[]>([]);
   const [form, setForm] = useState<EventItem>({
     id: "",
