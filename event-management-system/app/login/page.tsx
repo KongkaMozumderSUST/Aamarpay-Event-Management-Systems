@@ -27,8 +27,13 @@ const { register, handleSubmit, formState: { errors } } = useForm<LoginFormInput
         };
       localStorage.setItem("user", JSON.stringify(user));
       router.push("/");
-    } catch (err: any) {
-      setError(err.message || "Login failed");
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+    setError(err.message);
+  } else {
+    setError("Login failed");
+  }
+
     } finally {
       setLoading(false);
     }
@@ -79,7 +84,7 @@ const { register, handleSubmit, formState: { errors } } = useForm<LoginFormInput
 
       {errors && <p className="text-red-500">{error}</p>}
       {error && <p className="text-red-500">{error}</p>}
-      <p className="text-sm text-center">Don't have an account, <Link href="/signup" className="underline"> SignUp?</Link></p>
+      <p className="text-sm text-center">Don&apos;t have an account, <Link href="/signup" className="underline"> SignUp?</Link></p>
     </form>
   );
 }
