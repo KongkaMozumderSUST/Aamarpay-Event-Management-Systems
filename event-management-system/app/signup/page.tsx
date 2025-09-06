@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";;
 import { useRouter, redirect} from "next/navigation";
 import Link from "next/link";
+import { useUser } from "@/context/UserContext";
 
 interface LoginFormInputs {
   email: string;
@@ -14,7 +15,7 @@ export default function LoginPage() {
 const { register, handleSubmit, formState: { errors } } = useForm<LoginFormInputs>();
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-
+ const { user, setUser, logout } = useUser();
   const onSubmit = async (data: LoginFormInputs) => {
     try {
       setError(null);
@@ -25,6 +26,7 @@ const { register, handleSubmit, formState: { errors } } = useForm<LoginFormInput
             name: data.email.split("@")[0],
             password: data.password 
         };
+        setUser(user);
       localStorage.setItem("user", JSON.stringify(user));
       router.push("/");
     } catch (err:unknown){
